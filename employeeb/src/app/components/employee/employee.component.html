@@ -1,0 +1,32 @@
+@if (employee()!=undefined) {
+
+    <div class="container mt-5" >
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow-lg rounded-3">
+              <div class="card-header bg-primary text-white text-center fs-4 fw-bold">
+                Employee Profile
+              </div>
+              <div class="card-body">
+                <p><strong>ID:</strong> {{ employee()?.id }}</p>
+                <p><strong>Name:</strong> {{ employee()?.name }}</p>
+                <p><strong>Email:</strong> {{ employee()?.email }}</p>
+                <p><strong>Phone:</strong> {{ employee()?.phone || '-' }}</p>
+                <p><strong>Department:</strong> {{ employee()?.departmentId }}</p>
+                <p><strong>Position:</strong> {{ employee()?.position || '-' }}</p>
+                <p><strong>Date of Joining:</strong> 
+                  {{ employee()?.dateOfJoining ? (employee()?.dateOfJoining | date:'mediumDate') : '-' }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+}
+  @else {
+ 
+    <div class="alert alert-warning text-center mt-5">
+      Employee not found.
+    </div>
+ 
+}

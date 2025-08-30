@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <div class="row justify-content-center" >
+      <div class="col-md-8">
+        <div class="card shadow-lg border-0 rounded-3">
+          <div class="card-header bg-primary text-white text-center fs-4 fw-bold">
+            Employee Search
+          </div>
+          <div class="card-body p-4">
+            <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+               
+  
+              <!-- Department Id -->
+              <div class="mb-3">
+                <label for="departmentId" class="form-label fw-semibold">Department Id:</label>
+                <input    formControlName="departmentId" class="form-control" id="departmentId" rows="3" placeholder="Enter address"/>
+              </div>
+  
+              <!-- Submit -->
+              <div class="text-center">
+                <button type="submit" class="btn btn-success px-5">search</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
